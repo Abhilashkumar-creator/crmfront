@@ -26,7 +26,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
-          <Button variant = "contained" onClick={() => navigate("/SimpleFormExample")}>Login</Button>
+          <Button variant = "contained" onClick={() => navigate("/Loginpage")}>Login</Button>
         </Toolbar>
       </AppBar>
     </Box>

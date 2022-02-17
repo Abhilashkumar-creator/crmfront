@@ -5,12 +5,9 @@ import Home from "./Home";
 import Contact from "./Contact";
 import ButtonBases from "./ButtonAppBar1";
 import ButtonAppBar from "./ButtonAppBar1";
-import Login from "./Login";
-import Registration from "./Registration"
-import Login2 from "./Login2"
-import { Signinpage } from "./Signinpage";
-import SimpleFormExample from "./SimpleFormExample";
+import SimpleFormExample from "./LoginPage";
 import useForm from './useForm'
+import SignUp from "./SignUp";
 
 const App = () => {
   return (
@@ -20,12 +17,12 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/ButtonAppBar" element={<ButtonAppBar />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Registration" element={<Registration />} />
-          <Route path="/Login2" element={<Login2/>} />
-          <Route path="/SimpleFormExample" element={<SimpleFormExample/>} />
+          <Route path="/LoginPage" element={<SimpleFormExample/>} />
+          <Route path="/signup" element={<SignUp/>} />
+         
                    </Routes>
       </Router>
+      
       
       
          </div>

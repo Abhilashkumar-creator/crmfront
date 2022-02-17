@@ -71,7 +71,7 @@ function App() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="./SimpleFormExample" variant="body2">
+                <Link href="./SignUp" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

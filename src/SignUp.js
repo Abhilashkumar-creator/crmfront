@@ -19,7 +19,8 @@ export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-      console.log({
+    // eslint-disable-next-line no-console
+    console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
@@ -104,14 +105,15 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="./Login2" variant="body2">
+                <Link href="./Loginpage" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-        </Container>
+        
+      </Container>
     </ThemeProvider>
   );
 }
