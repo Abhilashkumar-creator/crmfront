@@ -87,15 +87,14 @@ const useForm = (callback) => {
 
 
     const handleSubmit = (event) => {
-        if(event) event.preventDefault();
-
-        if(Object.keys(errors).length === 0 && Object.keys(values).length !==0 ){
-            callback();
-
-        }else{
-            alert("There is an Error!");
-        }
-    }
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        // eslint-disable-next-line no-console
+        console.log({
+          email: data.get('email'),
+          password: data.get('password'),
+        });
+      };
 
 
     return {

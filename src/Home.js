@@ -7,7 +7,7 @@ const Home = (props) => {
 
   return (
     <>
-       <Button variant = "contained" onClick={() => navigate("/ButtonAppBar")}>Login</Button>
+       <Button variant = "contained" onClick={() => navigate("/ButtonAppBar")}>how r u</Button>
         
     </>
   );

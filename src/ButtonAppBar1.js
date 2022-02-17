@@ -7,11 +7,12 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
+import './App.css'
 
 export default function ButtonAppBar() {
   const navigate = useNavigate();
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} className="Homepage">
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -21,14 +22,29 @@ export default function ButtonAppBar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
-          </IconButton>
+           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Home
+          </Typography>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            About
+          </Typography>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Analytics
+          </Typography>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Pricing
           </Typography>
           <Button variant = "contained" onClick={() => navigate("/Loginpage")}>Login</Button>
+          
         </Toolbar>
+        
       </AppBar>
+      <p>Welcome to CRM</p>
     </Box>
-  );
+   
+     );
+     
+   
+     
 }
