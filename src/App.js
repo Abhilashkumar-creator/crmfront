@@ -1,27 +1,35 @@
-import React from 'react';
-import './App.css';
-import { Navbar } from './Components/Navbar';
-import { Footer } from './Components/Footer'
-import { Routes, Route } from 'react-router-dom';
-import { Dashboard } from './components/Dashboard';
-import { LeadForm } from './components/LeadForm';
-import { ViewLead } from './components/ViewLead';
-import { Home } from './components/Home';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+import Home from "./Home";
+import Contact from "./Contact";
+import ButtonBases from "./ButtonAppBar1";
+import ButtonAppBar from "./ButtonAppBar1";
+import Login from "./Login";
+import Registration from "./Registration"
+
+const App = () => {
   return (
-    <div>
-      <Navbar/> 
-      <Routes>
-        <Route exact path={"/"} component={Home} />
-        <Route exact path={"/dashboard"} component={Dashboard} />
-        <Route exact path={"/form"} component={LeadForm} />
-        <Route exact path={'/form/:id'} component={LeadForm} />
-        <Route exact path={'/view/:id'} component={ViewLead} />
-      </Routes>
-      <Footer/>
+    <div style={styles.app}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/ButtonAppBar" element={<ButtonAppBar />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Registration" element={<Registration />} />
+        </Routes>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
+
+// Kindacode.com
+// Just some styling
+const styles = {
+  app: {
+    padding: 50,
+  },
+};
