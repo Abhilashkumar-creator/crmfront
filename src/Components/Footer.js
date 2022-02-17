@@ -1,8 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-export function Footer()
-{
+export const Footer = () =>{
   return (
     <footer className="page-footer font-small teal pt-4">
       <div className={"container-fluid text-center text-md-left"}>

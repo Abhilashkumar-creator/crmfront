@@ -1,10 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-export function Nav()
-{
+export const Navbar = () =>{
   return(
-      <nav className={"navbar navbar-expand-lg navbar-light bg-light"}>
+      <><nav className={"navbar navbar-expand-lg navbar-light bg-light"}>
     <ul className="navbar-nav">
     <li className= {"navbar-brand"}>Lead Tracker</li>
       <li className="nav-item active">
@@ -18,5 +17,6 @@ export function Nav()
       </li>
     </ul>
 </nav>
+</>
   )
 }

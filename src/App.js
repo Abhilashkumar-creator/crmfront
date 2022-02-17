@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Nav } from './components/Nav';
-import { Footer } from './components/Footer';
+import { Navbar } from './Components/Navbar';
+import { Footer } from './Components/Footer'
 import { Routes, Route } from 'react-router-dom';
 import { Dashboard } from './components/Dashboard';
 import { LeadForm } from './components/LeadForm';
@@ -11,7 +11,7 @@ import { Home } from './components/Home';
 function App() {
   return (
     <div>
-      <Nav />
+      <Navbar/> 
       <Routes>
         <Route exact path={"/"} component={Home} />
         <Route exact path={"/dashboard"} component={Dashboard} />
@@ -19,7 +19,7 @@ function App() {
         <Route exact path={'/form/:id'} component={LeadForm} />
         <Route exact path={'/view/:id'} component={ViewLead} />
       </Routes>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
