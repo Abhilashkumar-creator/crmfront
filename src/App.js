@@ -10,6 +10,7 @@ import Registration from "./Registration"
 import Login2 from "./Login2"
 import { Signinpage } from "./Signinpage";
 import SimpleFormExample from "./SimpleFormExample";
+import useForm from './useForm'
 
 const App = () => {
   return (
