@@ -4,10 +4,12 @@ import { Table } from "react-bootstrap";
 import { Breadcrumb } from "react-bootstrap";
 import PropTypes from "prop-types";
 import tickets from './tickets.json';
+import { useNavigate } from 'react-router-dom';
 
 import { Link } from "react-router-dom";
 
 export const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <Container>
     <Row>
@@ -17,14 +19,15 @@ export const Dashboard = () => {
     </Row>
     <Row>
         <Col className="text-center mt-5 mb-2">
-        <Link to="/add-ticket">
+        
             <Button
               variant="info"
               style={{ fontSize: "2rem", padding: "10px 30px" }}
+              onClick={() => navigate("/AddTicket")}
             >
               Add New Ticket
             </Button>
-          </Link>
+          
         </Col>
       </Row>
       <Row>
