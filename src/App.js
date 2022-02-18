@@ -8,6 +8,7 @@ import SimpleFormExample from "./LoginPage";
 import useForm from './useForm'
 import SignUp from "./SignUp";
 import Forgotpassword from "./Forgotpassword";
+import { Dashboard } from "./dashboard";
 const App = () => {
   return (
     <div style={styles.app}>
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/LoginPage" element={<SimpleFormExample/>} />
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/Forgotpassword" element={<Forgotpassword/>}/>
+          <Route path="/dashboard" element={<Dashboard/>}/>
           </Routes>
       </Router>
       

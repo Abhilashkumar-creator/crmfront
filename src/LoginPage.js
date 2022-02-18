@@ -13,6 +13,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles'; 
 import Avatar from '@mui/material/Avatar';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { useNavigate } from 'react-router-dom';
 
 const theme = createTheme();
 
@@ -28,8 +29,9 @@ function App() {
   //Custom hook call
   const {handleChange, values,errors,handleSubmit} = useForm(formLogin);
 
-
+  const navigate = useNavigate();
   return (
+    
     <div className="App">
         <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
@@ -63,7 +65,7 @@ function App() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-        <Button variant="contained" sx={{ mt: 3, mb: 2 }}> Sign In </Button>
+        <Button variant="contained" sx={{ mt: 3, mb: 2 }} onClick={() => navigate("/dashboard")}> Sign In </Button>
         <Grid container>
               <Grid item xs>
                 <Link href="./Forgotpassword" variant="body2">
